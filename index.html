@@ -21,7 +21,7 @@
   
 </head>
 <body>
-<textarea id="input_area" name="message" rows="10" cols="100">ลองทำการแปลภาษา</textarea>
+<textarea id="input_area" name="message" rows="10" cols="100">ลองแปลภาษา</textarea>
 
 <br>
 <br>
@@ -37,9 +37,9 @@
 
 <script>
 
-
 // The languages that Google Translate supports  ISO 639-1 codes
 // See more https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+
 var langs = {
     //'auto': 'Automatic',
     'af': 'Afrikaans',
@@ -150,10 +150,10 @@ var langs = {
 
 key_langs = Object.keys(langs)
 for (var i = 0; i < key_langs.length; i++) {  
-  select_language_from.options[i] = new Option(langs[key_langs[i]], i);
-  select_language_to.options[i] = new Option(langs[key_langs[i]], i);
+  select_language_from.options[i]     = new Option(langs[key_langs[i]], i);
+  select_language_to.options[i]       = new Option(langs[key_langs[i]], i);
   select_language_from.selectedIndex  = 93
-  select_language_to.selectedIndex  = 21
+  select_language_to.selectedIndex    = 21
 }
 
 function translate(sentences, targetDiv, from_lang ='th', to_lang='en'){
@@ -166,11 +166,11 @@ function translate(sentences, targetDiv, from_lang ='th', to_lang='en'){
 						
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-		var jsonText = JSON.parse(this.responseText);
-		text = jsonText[0][0][0]
-		text = text.replace(/<br>/g, '\n')
-      targetDiv.innerHTML = "&nbsp;" + text;	  
+    if (this.readyState    == 4 && this.status == 200) {
+		var jsonText           = JSON.parse(this.responseText);
+		text                   = jsonText[0][0][0]
+		text                   = text.replace(/<br>/g, '\n')
+    targetDiv.innerHTML    = "&nbsp;" + text;	  
     }
   };
   xhttp.open("GET", endPoint, true);
@@ -179,18 +179,18 @@ function translate(sentences, targetDiv, from_lang ='th', to_lang='en'){
 
 function submit_translate(){		
 	from_lang = key_langs[select_language_from.value]
-	to_lang = key_langs[select_language_to.value]		
+	to_lang   = key_langs[select_language_to.value]		
 	console.log("translate from: ", langs[from_lang] , " to ", langs[to_lang])	
 	translate(input_area.value, 
-				translated_area, 
-				from_lang=from_lang, 
-				to_lang=to_lang)
+				    translated_area, 
+				    from_lang=from_lang, 
+				    to_lang=to_lang)
 }
 
 </script>
 
 <div>
-  <br/> ขอขอบคุณโค้ดจาก <a href='https://www.facebook.com/programmerthai/'>โปรแกรมเมอร์ไทย thai programmer</a>
+  <br/> ขอขอบคุณต้นแบบโค้ดจาก เพจ <a href='https://www.facebook.com/programmerthai/'>โปรแกรมเมอร์ไทย thai programmer</a>
 </div>
 
 </body>
