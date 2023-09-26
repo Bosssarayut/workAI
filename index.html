@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<br> ai เแปลภาษา <br/>
-	<br/> หน้าเว็บนี้คือ ai แปลภาษา เมื่อเราใส่คำลงไปจะเหมือนเป็นการถาม ai ตัวนี้ว่าคำนี้แปลว่าอะไรในตัวเลือกภาษาที่่กำหนด ai จะทำการนำคำที่เราใส่ไปค้นหาในเว็บ https://translate.googleapis.com/ เพื่อหาคำแปล จากนั้นจะนำคำแปลที่ได้มาตอบเรา <br/>
-<br/>
-<br/>
+	<h2> Ai เแปลภาษา </h2>
+	<br> หน้าเว็บนี้คือ ai แปลภาษา เมื่อเราใส่คำลงไปจะเหมือนเป็นการถาม ai ตัวนี้
+  <br> ว่าคำนี้แปลว่าอะไรในตัวเลือกภาษาที่่กำหนด
+  <br> ai จะทำการนำคำที่เราใส่ไปค้นหาในเว็บ https://translate.googleapis.com/ เพื่อหาคำแปล
+  <br> จากนั้นจะนำคำแปลที่ได้มาตอบเรา
+  <br>
+  <br> This web page is a language translation AI. 
+  <br> When we enter a word, it is like asking this AI what this word means in the given language options. 
+  <br> AI will take the word we entered and search on the website to find the translation. 
+
+<br>
+<br>
+
 <head>
+  
+    <style>
+      body {background-color: rgb(196, 254, 254)}
+    </style>
+  
 </head>
 <body>
 <textarea id="input_area" name="message" rows="10" cols="100">ลองทำการแปลภาษา</textarea>
-<br/>
-<br/>
+
+<br>
+<br>
+
 <button onclick="submit_translate()">แปลภาษา</button>
 &nbsp;&nbsp;&nbsp;จาก&nbsp;&nbsp;&nbsp;<select id="select_language_from"></select>
 &nbsp;&nbsp;&nbsp;เป็น&nbsp;&nbsp; &nbsp;<select id="select_language_to"></select>
 
 <br>
-<br/>
+<br>
+
 <textarea id="translated_area" name="message" rows="10" cols="100"></textarea>
 
 <script>
@@ -171,9 +188,11 @@ function submit_translate(){
 }
 
 </script>
+
 <div>
-<br/> ขอขอบคุณโค้ดจาก <a href='https://www.facebook.com/programmerthai/'>โปรแกรมเมอร์ไทย thai programmer</a>
+  <br/> ขอขอบคุณโค้ดจาก <a href='https://www.facebook.com/programmerthai/'>โปรแกรมเมอร์ไทย thai programmer</a>
 </div>
+
 </body>
 
 </html>
